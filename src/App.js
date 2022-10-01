@@ -1,43 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const colors = [
-  "#234E70", "#5CBDB9", "#9AD8D1", "#0D518A", "#632238", "#216A9A", "#34568B", "#BD8C7D", "#E1B382", "#FFE00", "#8458B3", "#A28089", "#2D545E", "firebrick", "#237E70", "#0F2862", "#9BC400", "#008080", "#OD5184"
-  ];
+const colors = ["#234E70", "#5CBDB9", "#9AD8D1", "#0D518A", "#632238", "#216A9A", "#34568B", "#BD8C7D", "#E1B382", "#FFE00", "#8458B3", "#A28089", "#2D545E", "firebrick", "#237E70", "#0F2862", "#9BC400", "#008080", "#OD5184"];
 
 const Title = () => {
   return <h1 className="title">RANDOM QUOTE MACHINE</h1>
 }
 
 class Paragraph extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { fade: false }
-  }
   render() {
-    const fade = this.state.fade;
     return (
       <div id="quote-box">
         <blockquote className="blockquote">
           <span className="quote">“</span>
-          <p id="text"
-        onAnimationEnd={() => this.setState({ fade: false })}
-        className={fade ? "text" : "text"} ref="hello">{this.props.text}</p><span className="quote">”</span>
+          <p id="text" className="text">{this.props.text}</p>
+          <span className="quote">”</span>
           <p className="author" id="author">- {this.props.author}</p>
         </blockquote>
         <span className="flex">
-          <i className="fas fa-chevron-left" onClick={() => {this.props.back; this.setState({ fade: true })}}></i>
+          <i className="fas fa-chevron-left" onClick={this.props.back}></i>
           <i className="fab fa-twitter-square"><a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank"></a></i>
           <i id="new-quote" className="fas fa-chevron-right" onClick={this.props.next}></i>
         </span>
-    </div>
-    )
+      </div>
+    );
   }
 }
 
 const Footer = () => {
-  return <footer className="footer">By: Leo emaXie      
-   </footer>
+  return <footer className="footer">By: Leo emaXie</footer>
 }
 
 let quoteState = [];
@@ -61,8 +52,7 @@ class Main extends React.Component {
   componentDidMount() {
     fetch("https://type.fit/api/quotes")
       .then(response => response.json())
-      .then(data =>
-        this.setState({ quotes: data }));
+      .then(data => this.setState({ quotes: data }));
   }
 
   handleNext() {
@@ -72,7 +62,6 @@ class Main extends React.Component {
       hasChangedBackground: true,
       counter: state.counter >= this.state.quotes.length ? state.counter + 0 : state.counter += 1
     }));
-
     quoteState.push(this.state.randomIndex);
     colorState.push(this.state.colorIndex);
   }
@@ -90,9 +79,7 @@ class Main extends React.Component {
     const setColor = colors[this.state.colorIndex];
     const fade = this.state.fade;
 
-    {
-      this.state.hasChangedBackground ? document.body.style.backgroundColor = setColor : document.body.style.backgroundColor = "#234E70"
-    }
+    { this.state.hasChangedBackground ? document.body.style.backgroundColor = setColor : document.body.style.backgroundColor = "#234E70" }
 
     const changeStyle = {
       color: setColor,
@@ -110,7 +97,7 @@ class Main extends React.Component {
              <Paragraph text={getQuotes.text} author={getQuotes.author} next={this.handleNext} back={this.handleBack}/>
             </div>
             <Footer/> 
-         </div>
+      </div>
     )
   }
 }

@@ -8,9 +8,6 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   text-align: center;
-  animation-name: flash;
-  animation-duration: 2s;
-  animation-fill-mode: both;
 }
 
 .text,
@@ -58,19 +55,6 @@
 
 .width {
   width: 80%;
-}
-
-@keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
-
-  25%,
-  75% {
-    opacity: 0;
-  }
 }
 
 @media screen and (min-width: 600px) {
