@@ -1,0 +1,84 @@
+.blockquote {
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  animation-name: flash;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.text,
+.author,
+.flex {
+  margin-top: -35px;
+}
+
+.title {
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 0 8px 5px -8px;
+  width: 100%;
+}
+
+.author {
+  font-family: 'Eczar', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  align-self: flex-end;
+}
+
+.quote {
+  font-family: 'Righteous', sans-serif;
+  margin-left: 45%;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.footer {
+  font-family: 'Alice', serif;
+  position: sticky;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.width {
+  width: 80%;
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    margin-top: 50%;
+  }
+
+  .width {
+    width: 50%;
+  }
+}
