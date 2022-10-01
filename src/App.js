@@ -16,7 +16,6 @@ class Paragraph extends React.Component {
   }
   render() {
     const fade = this.state.fade;
-setInterval(() => {console.log(this.state.fade)}, 2000)
     return (
       <div id="quote-box">
         <blockquote className="blockquote">
