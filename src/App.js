@@ -1,7 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const colors = ["#234E70", "#5CBDB9", "#9AD8D1", "#0D518A", "#632238", "#216A9A", "#34568B", "#BD8C7D", "#E1B382", "#FFE00", "#8458B3", "#A28089", "#2D545E", "firebrick", "#237E70", "#0F2862", "#9BC400", "#008080", "#OD5184"];
+const colors = [
+    "#234E70",
+    "#5CBDB9",
+    "#9AD8D1",
+    "#0D518A",
+    "#632238",
+    "#216A9A",
+    "#34568B",
+    "#BD8C7D",
+    "#E1B382",
+    "#FFE000",
+    "#8458B3",
+    "#A28089",
+    "#2D545E",
+    "firebrick",
+    "#237E70",
+    "#0F2862",
+    "#9BC400",
+    "#008080",
+    "#OD5184"
+  ];
 
 const Title = () => {
   return <h1 className="title">RANDOM QUOTE MACHINE</h1>
@@ -42,7 +62,6 @@ class Main extends React.Component {
       randomIndex: 0,
       colorIndex: 0,
       hasChangedBackground: false,
-      fade: false,
       counter: -1,
     };
     this.handleNext = this.handleNext.bind(this);
@@ -77,7 +96,6 @@ class Main extends React.Component {
   render() {
     const getQuotes = this.state.quotes[this.state.randomIndex];
     const setColor = colors[this.state.colorIndex];
-    const fade = this.state.fade;
 
     { this.state.hasChangedBackground ? document.body.style.backgroundColor = setColor : document.body.style.backgroundColor = "#234E70" }
 
@@ -92,11 +110,11 @@ class Main extends React.Component {
 
     return (
       <div>
-           <Title color={setColor}/>
-           <div className="width" style ={changeStyle}>
-             <Paragraph text={getQuotes.text} author={getQuotes.author} next={this.handleNext} back={this.handleBack}/>
-            </div>
-            <Footer/> 
+        <Title color={setColor}/>
+        <div className="width" style ={changeStyle}>
+          <Paragraph text={getQuotes.text} author={getQuotes.author} next={this.handleNext} back={this.handleBack}/>
+        </div>
+        <Footer/> 
       </div>
     )
   }
