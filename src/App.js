@@ -39,7 +39,7 @@ class Paragraph extends React.Component {
         </blockquote>
         <span className="flex">
           <i className="fas fa-chevron-left" onClick={this.props.back}></i>
-          <i className="fab fa-twitter-square"><a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank"></a></i>
+          <i className="fab fa-twitter-square"><a id="tweet-quote" href="twitter.com/intent/tweet" target="_top"></a></i>
           <i id="new-quote" className="fas fa-chevron-right" onClick={this.props.next}></i>
         </span>
       </div>
