@@ -48,7 +48,7 @@ class Paragraph extends React.Component {
 }
 
 const Footer = () => {
-  return <footer className="footer">By: Leo emaXie</footer>
+  return <footer className="footer">By: Leo Emaxie</footer>
 }
 
 let quoteState = [];
