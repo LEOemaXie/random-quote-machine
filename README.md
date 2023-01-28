@@ -1,5 +1,5 @@
 # Random Quote Machine 
-This fetches quotes in a format and displays it randomly to the user. It was built as part of the solution to my projects to freeCodeCamp.
+This app fetches quotes in a JSON format and displays it randomly to the user. It was built as part of my solution to the freeCodeCamp's Frontend Development Libraries track project.
 
 ## Overview
 Users should be able to:
@@ -9,7 +9,7 @@ Users should be able to:
 - Tweet the quote
 
 ## Challenges
-The challenges I faced was how to keep track of generated random quotes and display them when the user clicks on the arrow. Also I had to figure a way to fetch the large JSON file of quotes without affecting the display of other components.
+The challenges I faced was on how to keep track of generated random quotes and display them when the user clicks on the back arrow. Also I had to figure a way to fetch the large JSON file of quotes without affecting the display of other components.
 
 ## What I Learnt 
 - How to fetch and parse JSON from APIs
@@ -22,6 +22,6 @@ The challenges I faced was how to keep track of generated random quotes and disp
 - [React](https://reactjs.org/)
 
 ## Acknowledgement
-[typefit](https://type.fit/api/quotes): For the quotes API
+[Typefit](https://type.fit/api/quotes): For the quotes API
 
 
