@@ -1,3 +1,8 @@
+body {
+  font-display: swap;
+  font-family: 'Eczar', sans-serif;
+}
+
 .blockquote {
   display: flex;
   flex-direction: column;
@@ -5,7 +10,6 @@
 }
 
 .text {
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   text-align: center;
 }
@@ -15,9 +19,10 @@
 .flex {
   margin-top: -35px;
 }
-
-.title {
+.title , .quote {
   font-family: 'Righteous', cursive;
+}
+.title {
   text-align: center;
 }
 
@@ -31,21 +36,18 @@
 }
 
 .author {
-  font-family: 'Eczar', sans-serif;
   font-size: 15px;
   font-style: italic;
   align-self: flex-end;
 }
 
 .quote {
-  font-family: 'Righteous', sans-serif;
   margin-left: 45%;
   font-size: 80px;
   font-weight: 600;
 }
 
 .footer {
-  font-family: 'Alice', serif;
   position: sticky;
   text-align: center;
   margin-top: 10px;
