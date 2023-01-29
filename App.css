@@ -60,11 +60,11 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  body {
-    margin-top: 50%;
-  }
-
   .width {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
   }
 }
